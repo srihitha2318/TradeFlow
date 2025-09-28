@@ -1,142 +1,73 @@
-Submission Document – Trade Flow (B2B Marketplace)
-a) Problem Statement Reference
+# Welcome to your Lovable project
 
-Problem Statement Chosen:
-Small retailers face difficulties in sourcing bulk products due to fragmented offline channels. Suppliers also lack a unified platform to reach many retailers efficiently.
+## Project info
 
-Reason to Choose the Problem Statement:
-The wholesale and retail ecosystem is shifting online. With global B2B marketplace sales projected to reach $3.6 trillion by 2024, there is a strong demand for a centralized, digital B2B procurement solution. Trade Flow addresses inefficiencies by modernizing the process for both suppliers and retailers.
+**URL**: https://lovable.dev/projects/34a09fbf-58dc-43f1-b78e-9c6b49738c39
 
-b) Solution Overview
+## How can I edit this code?
 
-Proposed Approach (2–3 lines):
-Build a digital B2B retail hub where suppliers upload and manage products, while retailers can discover, filter, and order in bulk. The platform integrates an AI-powered shopping assistant to improve decision-making and streamline sourcing.
+There are several ways of editing your application.
 
-Key Features / Modules:
+**Use Lovable**
 
-Role-based accounts (Supplier / Retailer)
+Simply visit the [Lovable Project](https://lovable.dev/projects/34a09fbf-58dc-43f1-b78e-9c6b49738c39) and start prompting.
 
-Supplier product management dashboard
+Changes made via Lovable will be committed automatically to this repo.
 
-Retailer product catalog with search & filters
+**Use your preferred IDE**
 
-Shopping cart system
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-AI-powered shopping assistant for queries & recommendations
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Responsive, modern UI with fast navigation
+Follow these steps:
 
-c) System Architecture
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-Architecture Diagram / Workflow (Conceptual):
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-[Supplier / Retailer] 
-       ↓
-[React Frontend UI]
-       ↓
-[Application State / API Layer] → [AI Assistant API]
-       ↓
-[Cart Context / Local Storage / Future Database]
+# Step 3: Install the necessary dependencies.
+npm i
 
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
 
-Data Flow Explanation:
+**Edit a file directly in GitHub**
 
-Users select their role (Supplier/Customer).
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-Suppliers upload product details (stored in application state / backend).
+**Use GitHub Codespaces**
 
-Retailers browse catalog, search/filter, and add items to cart.
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-Cart context manages checkout flow.
+## What technologies are used for this project?
 
-AI Assistant processes queries and suggests products via AI API integration.
+This project is built with:
 
-d) Technology Stack
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-Backend: Currently frontend-only prototype; future-ready for Node.js/Express.
+## How can I deploy this project?
 
-Frontend: React + TypeScript, Vite bundler.
+Simply open [Lovable](https://lovable.dev/projects/34a09fbf-58dc-43f1-b78e-9c6b49738c39) and click on Share -> Publish.
 
-Databases: For prototype → Local storage & app state; future → SQL/NoSQL.
+## Can I connect a custom domain to my Lovable project?
 
-ML/AI Frameworks: AI Assistant API (integration-ready, e.g., OpenAI or Salesforce AI).
+Yes, you can!
 
-APIs / Libraries:
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-React Router (navigation)
-
-React Context API & TanStack React Query (state & data)
-
-Tailwind CSS & shadcn/ui (UI components)
-
-Lucide React (icons)
-
-e) Algorithms & Models
-
-Algorithm(s) Chosen: Recommendation system (via AI chat assistant).
-
-Reason for Choice: Helps retailers quickly identify suitable suppliers/products, improving engagement and sales conversions.
-
-Model Training & Testing Approach:
-
-Prototype → Uses external AI API for recommendations.
-
-Future → Train custom recommendation models on user purchase history and supplier data.
-
-f) Data Handling
-
-Data Sources Used: Supplier product uploads, mock datasets (expandable to live APIs/datasets).
-
-Preprocessing Methods: Product categorization, filtering, and rating normalization.
-
-Storage / Pipeline Setup:
-
-Prototype: In-browser state & local storage.
-
-Future: Cloud DB (MongoDB/PostgreSQL) with pipelines for real-time updates.
-
-g) Implementation Plan
-
-Initial Setup & Environment: React + TypeScript project setup, Tailwind integration, routing configuration.
-
-Core Module Development: Supplier dashboard, Retailer catalog, Cart system.
-
-Integration & Testing: Add AI chat assistant, ensure cart & product management work seamlessly.
-
-Final Deployment-ready Build: Optimize UI/UX, integrate backend & database, cloud deployment.
-
-h) Performance & Validation
-
-Evaluation Metrics:
-
-User engagement (time on platform, AI assistant usage)
-
-Conversion rate (cart additions → purchases)
-
-Response time (UI interactions, AI assistant replies)
-
-Testing Strategy:
-
-Unit tests for components
-
-Integration tests for workflows (login, product upload, cart)
-
-User acceptance testing with demo retailers & suppliers
-
-i) Deployment & Scalability
-
-Deployment Plan:
-
-Deploy frontend on Vercel/Netlify (prototype).
-
-Future backend with Node.js/Express deployed on AWS/GCP with CI/CD pipelines.
-
-Scalability Considerations:
-
-Move from local state to cloud-based database.
-
-API-based microservices for product, user, and order management.
-
-AI recommendation model scaling with more user/product data.
-
-Load balancing and CDN for global accessibility.
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
